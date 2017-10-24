@@ -1,0 +1,15 @@
+<div>
+<mat-grid-list cols="4" rowHeight="4:5">
+  <mat-grid-tile *ngFor="let item of items" class="articles">
+<div *ngIf="(item.sizes == filterSize || !filterSize) && (item.colors == filterColor || !filterColor)
+ && (item.prices == filterPrice || !filterPrice)">
+      <img src="{{ item.img }}" class="box">
+      <br>
+      {{item.name}} : <br>
+       {{item.prices}} euros
+       {{ item.sizes }}
+</div>
+  </mat-grid-tile>
+
+</mat-grid-list>
+</div>
